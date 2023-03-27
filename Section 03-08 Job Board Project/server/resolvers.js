@@ -7,6 +7,21 @@ export const resolvers = {
     jobs: () => Job.findAll(),
   },
 
+  Mutation: {
+    createJob: (_root, { input }) => {
+      const job = Job.create(input);
+      return job;
+    },
+    deleteJob: (_root, { id }) => {
+      const job = Job.delete(id);
+      return job;
+    },
+    updateJob: (_root, { input }) => {
+      const job = Job.update(input);
+      return job;
+    },
+  },
+
   Company: {
     jobs: (company) => Job.findAll((job) => job.companyId === company.id),
   },
