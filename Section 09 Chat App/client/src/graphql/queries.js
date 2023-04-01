@@ -1,4 +1,14 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
+
+export const MESSAGE_ADDED_SUBSCRIPTION = gql`
+  subscription MessageAddedSubscription {
+    message: messageAdded {
+      id
+      from
+      text
+    }
+  }
+`;
 
 export const MESSAGES_QUERY = gql`
   query MessagesQuery {
