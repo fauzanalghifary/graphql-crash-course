@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@graphql-tools/schema": "^9.0.17",
-    "apollo-server-express": "^3.11.1",
+    "@apollo/server": "^4.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-jwt": "^8.2.1",
